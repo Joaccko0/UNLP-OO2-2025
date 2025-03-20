@@ -5,73 +5,67 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Aca escribiremos los test de unidad para cada clase 
+ * 
+ */
 public class JuegoTest {
 	
-	Opcion papel, tijera, piedra, spock, lagarto;
-	Juego juego;
+	Juego piedra, papel, tijera, lagarto, spock;
+	Resultado r;
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		tijera = new Tijera("Tijera");
-		piedra = new Piedra("Piedra");
-		papel = new Papel("Papel");
-		spock = new Spock("Spock");
-		lagarto = new Lagarto("Lagarto");
-		tijera.agregarGanaContra(papel);
-		tijera.agregarGanaContra(lagarto);
-		piedra.agregarGanaContra(tijera);
-		piedra.agregarGanaContra(lagarto);
-		papel.agregarGanaContra(piedra);
-		papel.agregarGanaContra(spock);
-		lagarto.agregarGanaContra(papel);
-		lagarto.agregarGanaContra(spock);
-		spock.agregarGanaContra(tijera);
-		spock.agregarGanaContra(piedra);
-		juego = new Juego();
+		piedra = new Piedra();
+		papel = new Papel();
+		tijera = new Tijera();
+		spock = new Spock();
+		lagarto = new Lagarto();
 	}
 	
     @Test
     public void testTijera() {
-        assertEquals("Ganador: Tijera", juego.jugada(tijera, papel));
-        assertEquals("Ganador: Piedra", juego.jugada(tijera, piedra));
-        assertEquals("Ganador: Tijera", juego.jugada(tijera, lagarto));
-        assertEquals("Ganador: Spock", juego.jugada(tijera, spock));
-        assertEquals("Empate", juego.jugada(tijera, tijera));
+    	assertEquals(Resultado.PIERDE, tijera.jugar(piedra));
+    	assertEquals(Resultado.GANA, tijera.jugar(papel));
+    	assertEquals(Resultado.EMPATA, tijera.jugar(tijera));
+    	assertEquals(Resultado.GANA, tijera.jugar(lagarto));
+    	assertEquals(Resultado.PIERDE, tijera.jugar(spock));
     }
     
     @Test
     public void testPiedra() {
-        assertEquals("Ganador: Piedra", juego.jugada(piedra, tijera));
-        assertEquals("Ganador: Piedra", juego.jugada(piedra, lagarto));
-        assertEquals("Ganador: Spock", juego.jugada(piedra, spock));
-        assertEquals("Ganador: Papel", juego.jugada(piedra, papel));
-        assertEquals("Empate", juego.jugada(piedra, piedra));
+    	assertEquals(Resultado.EMPATA, piedra.jugar(piedra));
+    	assertEquals(Resultado.PIERDE, piedra.jugar(papel));
+    	assertEquals(Resultado.GANA, piedra.jugar(tijera));
+    	assertEquals(Resultado.GANA, piedra.jugar(lagarto));
+    	assertEquals(Resultado.PIERDE, piedra.jugar(spock));
     }
     
     @Test
     public void testPapel() {
-        assertEquals("Ganador: Papel", juego.jugada(papel, piedra));
-        assertEquals("Ganador: Tijera", juego.jugada(papel, tijera));
-        assertEquals("Ganador: Papel", juego.jugada(papel, spock));
-        assertEquals("Ganador: Lagarto", juego.jugada(papel, lagarto));
-        assertEquals("Empate", juego.jugada(papel, papel));
+    	assertEquals(Resultado.GANA, papel.jugar(piedra));
+    	assertEquals(Resultado.EMPATA, papel.jugar(papel));
+    	assertEquals(Resultado.PIERDE, papel.jugar(tijera));
+    	assertEquals(Resultado.PIERDE, papel.jugar(lagarto));
+    	assertEquals(Resultado.GANA, papel.jugar(spock));
     }
     
     @Test
     public void testLagarto() {
-        assertEquals("Ganador: Piedra", juego.jugada(lagarto, piedra));
-        assertEquals("Ganador: Tijera", juego.jugada(lagarto, tijera));
-        assertEquals("Ganador: Lagarto", juego.jugada(lagarto, papel));
-        assertEquals("Ganador: Lagarto", juego.jugada(lagarto, spock));
-        assertEquals("Empate", juego.jugada(lagarto, lagarto));
+    	assertEquals(Resultado.PIERDE, lagarto.jugar(piedra));
+    	assertEquals(Resultado.GANA, lagarto.jugar(papel));
+    	assertEquals(Resultado.PIERDE, lagarto.jugar(tijera));
+    	assertEquals(Resultado.EMPATA, lagarto.jugar(lagarto));
+    	assertEquals(Resultado.GANA, lagarto.jugar(spock));
     }
     
     @Test
     public void testSpock() {
-        assertEquals("Ganador: Spock", juego.jugada(spock, piedra));
-        assertEquals("Ganador: Spock", juego.jugada(spock, tijera));
-        assertEquals("Ganador: Papel", juego.jugada(spock, papel));
-        assertEquals("Ganador: Lagarto", juego.jugada(spock, lagarto));
-        assertEquals("Empate", juego.jugada(spock, spock));
+    	assertEquals(Resultado.GANA, spock.jugar(piedra));
+    	assertEquals(Resultado.PIERDE, spock.jugar(papel));
+    	assertEquals(Resultado.GANA, spock.jugar(tijera));
+    	assertEquals(Resultado.PIERDE, spock.jugar(lagarto));
+    	assertEquals(Resultado.EMPATA, spock.jugar(spock));
     }
+    
 }

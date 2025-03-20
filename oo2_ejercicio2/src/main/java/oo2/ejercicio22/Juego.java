@@ -1,19 +1,17 @@
 package oo2.ejercicio22;
 
-public class Juego {
+public abstract class Juego {
 	
-	public Juego() {
-		
-	}
-
-	public String jugada(Opcion opcion1, Opcion opcion2) {
-		if (opcion1.ganaVs(opcion2)) {
-			return "Ganador: " + opcion1.getNombre(); 
-		}
-		else if(opcion2.ganaVs(opcion1)) {
-			return "Ganador: " + opcion2.getNombre();
-		}
-		else return "Empate";
-	}
+	public abstract Resultado jugar(Juego otroJuego);
+	
+	protected abstract Resultado jugarContraPapel(Papel papel);
+	
+	protected abstract Resultado jugarContraPiedra(Piedra piedra);
+	
+	protected abstract Resultado jugarContraTijera(Tijera tijera);
+	
+	protected abstract Resultado jugarContraLagarto(Lagarto lagarto);
+	
+	protected abstract Resultado jugarContraSpock(Spock spock);
 
 }
