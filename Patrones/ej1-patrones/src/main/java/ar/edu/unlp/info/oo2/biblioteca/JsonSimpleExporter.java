@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.biblioteca;
+package ar.edu.unlp.info.oo2.sueldos;
 
 import java.util.List;
 import org.json.simple.JSONArray;

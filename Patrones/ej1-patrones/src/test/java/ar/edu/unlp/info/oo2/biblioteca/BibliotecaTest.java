@@ -1,10 +1,8 @@
-package ar.edu.unlp.info.oo2.biblioteca;
+package ar.edu.unlp.info.oo2.sueldos;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import ar.edu.unlp.info.oo2.biblioteca.Biblioteca;
-import ar.edu.unlp.info.oo2.biblioteca.Socio;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

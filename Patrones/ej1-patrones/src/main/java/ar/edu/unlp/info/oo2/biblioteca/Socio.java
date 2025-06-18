@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.biblioteca;
+package ar.edu.unlp.info.oo2.sueldos;
 
 public class Socio {
 	private String nombre;
