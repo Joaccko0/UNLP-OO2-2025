@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ar.edu.unlp.info.oo2</groupId>
-  <artifactId>sueldos</artifactId>
+  <artifactId>biblioteca</artifactId>
   <version>0.0.2</version>
 
   <name>ejemplo_maven</name>
