@@ -11,8 +11,8 @@
         <module name="jira (1)" />
         <module name="peliculass" />
         <module name="sueldos" />
+        <module name="excursion" />
         <module name="MediaPlayer" />
-        <module name="jira" />
       </profile>
     </annotationProcessing>
   </component>
