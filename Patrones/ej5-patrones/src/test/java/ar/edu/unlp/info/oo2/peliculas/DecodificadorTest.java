@@ -43,6 +43,37 @@ class DecodificadorTest {
         decodificador.reproducirPelicula(rocky);
     }
 
+    @Test
+    void testInciso3() {
+        //configure al decodificador para que sugiera por similaridad (ii)
+        decodificador.setCriterioSugerencia(new Similaridad());
+        // solicite al mismo decodificador las sugerencias
+        List<Pelicula> sugeridasSimilaridad = decodificador.sugerirPeliculas();
+
+        //configure al mismo decodificador para que sugiera por puntaje (iii)
+        decodificador.setCriterioSugerencia(new Puntaje());
+        //solicite al mismo decodificador las sugerencias
+        List<Pelicula> sugeridasPuntaje = decodificador.sugerirPeliculas();
+
+        //Similaridad
+        assertTrue(sugeridasSimilaridad.contains(capitanAmerica));
+        assertTrue(sugeridasSimilaridad.indexOf(capitanAmerica) == 0);
+        assertTrue(sugeridasSimilaridad.contains(ironMan));
+        assertTrue(sugeridasSimilaridad.indexOf(ironMan) == 1);
+        assertTrue(sugeridasSimilaridad.contains(rambo));
+        assertTrue(sugeridasSimilaridad.indexOf(rambo) == 2);
+        assertEquals(3, sugeridasSimilaridad.size());
+
+        //Puntaje
+        assertTrue(sugeridasPuntaje.contains(dunkirk));
+        assertTrue(sugeridasPuntaje.indexOf(dunkirk) == 0);
+        assertTrue(sugeridasPuntaje.contains(ironMan));
+        assertTrue(sugeridasPuntaje.indexOf(ironMan) == 1);
+        assertTrue(sugeridasPuntaje.contains(capitanAmerica));
+        assertTrue(sugeridasPuntaje.indexOf(capitanAmerica) == 2);
+        assertEquals(3, sugeridasPuntaje.size());
+    }
+
     // Novedad
     @Test
     void testCriterioNovedad() {
