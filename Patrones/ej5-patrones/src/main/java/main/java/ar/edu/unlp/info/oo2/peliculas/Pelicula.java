@@ -46,7 +46,10 @@ public class Pelicula {
     }
 
     public void addSimilar(Pelicula pelicula) {
-        this.similares.add(pelicula);
+        if (!this.similares.contains(pelicula)) {
+            this.similares.add(pelicula);
+            pelicula.addSimilar(this);
+        }
     }
 
     /*
@@ -55,11 +58,25 @@ public class Pelicula {
         1 si this.puntaje > puntaje
     */
     public int compararPuntaje(double puntaje) {
-        return Double.compare(this.puntaje, puntaje);
+        return Double.compare(puntaje, this.puntaje);
     }
 
     public int compararAnio(int anio) {
         return Integer.compare(anio, this.getEstreno());
     }
 
+    @Override
+    public String toString() {
+        return this.titulo + " (" + this.estreno + ") - " + this.puntaje;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Pelicula pelicula = (Pelicula) o;
+
+        return this.titulo.equals(pelicula.titulo) && this.estreno == pelicula.estreno;
+    }
 }

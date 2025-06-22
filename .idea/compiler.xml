@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sueldos" />
+        <module name="biblioteca" />
         <module name="peliculas" />
+        <module name="jira (1)" />
+        <module name="peliculass" />
+        <module name="sueldos" />
         <module name="MediaPlayer" />
         <module name="jira" />
       </profile>

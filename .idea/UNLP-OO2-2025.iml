@@ -10,6 +10,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Patrones/ej3-patrones/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Patrones/ej4-patrones/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Patrones/ej5-patrones/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/Patrones/ej5-patrones/src/java/ar/edu/unlp/info/oo2" />
+      <excludeFolder url="file://$MODULE_DIR$/Patrones/ej5-patrones/src/java/ar/edu/unlp/info/oo2/peliculas" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

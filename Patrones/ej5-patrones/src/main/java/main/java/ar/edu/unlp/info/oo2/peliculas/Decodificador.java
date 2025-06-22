@@ -12,6 +12,8 @@ public class Decodificador {
 
     public Decodificador(CriterioSugerencia criterio) {
         this.criterioSugerencia = criterio;
+        this.grillaPeliculas = new ArrayList<Pelicula>();
+        this.reproducidas = new ArrayList<Pelicula>();
     }
 
     public void setCriterioSugerencia(CriterioSugerencia criterio) {
@@ -34,9 +36,17 @@ public class Decodificador {
         );
     }
 
+    public List<Pelicula> sugerirPeliculas() {
+        return criterioSugerencia.sugerirPeliculas(this);
+    }
+
     public void reproducirPelicula(Pelicula pelicula) {
         if(!this.reproducidas.contains(pelicula)) {
             this.reproducidas.add(pelicula);
         }
+    }
+
+    public void añadirPeliculaGrilla(Pelicula pelicula) {
+        this.grillaPeliculas.add(pelicula);
     }
 }
