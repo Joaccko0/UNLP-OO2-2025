@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.sueldos;
+package main.java.ar.edu.unlp.info.oo2.biblioteca;
 
 public class Main {
     public static void main(String [] args) {

@@ -6,7 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="biblioteca" />
+        <module name="sueldos" />
+        <module name="peliculas" />
+        <module name="MediaPlayer" />
+        <module name="jira" />
       </profile>
     </annotationProcessing>
   </component>

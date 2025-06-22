@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.sueldos;
+package test.java.ar.edu.unlp.info.oo2.biblioteca;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

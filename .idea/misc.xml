@@ -6,6 +6,9 @@
       <list>
         <option value="$PROJECT_DIR$/Patrones/ej-biblioteca/pom.xml" />
         <option value="$PROJECT_DIR$/Patrones/ej2-patrones/pom.xml" />
+        <option value="$PROJECT_DIR$/Patrones/ej3-patrones/pom.xml" />
+        <option value="$PROJECT_DIR$/Patrones/ej4-patrones/pom.xml" />
+        <option value="$PROJECT_DIR$/Patrones/ej5-patrones/pom.xml" />
       </list>
     </option>
   </component>

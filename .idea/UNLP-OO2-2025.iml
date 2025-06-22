@@ -7,6 +7,9 @@
       <sourceFolder url="file://$MODULE_DIR$/oo2_ejercicio2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Patrones/ej1-patrones/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Patrones/ej2-patrones/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Patrones/ej3-patrones/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Patrones/ej4-patrones/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Patrones/ej5-patrones/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
