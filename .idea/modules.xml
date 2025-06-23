@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/UNLP-OO2-2025.iml" filepath="$PROJECT_DIR$/.idea/UNLP-OO2-2025.iml" />
       <module fileurl="file://$PROJECT_DIR$/Patrones/ej3-patrones/biblioteca.iml" filepath="$PROJECT_DIR$/Patrones/ej3-patrones/biblioteca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Patrones/ej8-patrones/coneciones.iml" filepath="$PROJECT_DIR$/Patrones/ej8-patrones/coneciones.iml" />
       <module fileurl="file://$PROJECT_DIR$/Patrones/ej6-patrones/excursion.iml" filepath="$PROJECT_DIR$/Patrones/ej6-patrones/excursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Patrones/ej5-patrones/peliculas.iml" filepath="$PROJECT_DIR$/Patrones/ej5-patrones/peliculas.iml" />
       <module fileurl="file://$PROJECT_DIR$/Patrones/ej2-patrones/sueldos.iml" filepath="$PROJECT_DIR$/Patrones/ej2-patrones/sueldos.iml" />
