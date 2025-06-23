@@ -12,6 +12,7 @@
         <module name="peliculass" />
         <module name="sueldos" />
         <module name="excursion" />
+        <module name="calculadora" />
         <module name="MediaPlayer" />
       </profile>
     </annotationProcessing>
