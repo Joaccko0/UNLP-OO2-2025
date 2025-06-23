@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="coneciones" />
+        <module name="alquileres" />
         <module name="biblioteca" />
         <module name="peliculas" />
         <module name="jira (1)" />
