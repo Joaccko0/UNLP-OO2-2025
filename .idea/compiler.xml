@@ -7,14 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="coneciones" />
-        <module name="alquileres" />
         <module name="biblioteca" />
         <module name="peliculas" />
+        <module name="biblioteca (1)" />
+        <module name="calculadora (3)" />
+        <module name="sueldos" />
+        <module name="calculadora (2)" />
+        <module name="calculadora (1)" />
+        <module name="calculadora" />
+        <module name="alquileres" />
+        <module name="jira (2)" />
         <module name="jira (1)" />
         <module name="peliculass" />
-        <module name="sueldos" />
         <module name="excursion" />
-        <module name="calculadora" />
+        <module name="EncriptacionNuevo" />
         <module name="MediaPlayer" />
       </profile>
     </annotationProcessing>
