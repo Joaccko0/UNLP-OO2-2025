@@ -13,8 +13,8 @@
         <module name="calculadora (3)" />
         <module name="sueldos" />
         <module name="calculadora (2)" />
-        <module name="calculadora (1)" />
         <module name="calculadora" />
+        <module name="filesystem" />
         <module name="alquileres" />
         <module name="jira (2)" />
         <module name="jira (1)" />
