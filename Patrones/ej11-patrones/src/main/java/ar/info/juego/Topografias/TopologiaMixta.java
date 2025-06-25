@@ -47,6 +47,11 @@ public class TopologiaMixta implements Topologia{
     }
 
     @Override
+    public boolean compararConTopologiaPantano(TopologiaPantano topologia) {
+        return false;
+    }
+
+    @Override
     public boolean comparar(Topologia topologia) {
         return topologia.compararConTopologiaMixta(this);
     }

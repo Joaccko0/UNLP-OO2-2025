@@ -27,6 +27,11 @@ public class TopologiaTierra implements Topologia{
     }
 
     @Override
+    public boolean compararConTopologiaPantano(TopologiaPantano topologia) {
+        return false;
+    }
+
+    @Override
     public boolean comparar(Topologia topologia) {
         return topologia.compararConTopologiaTierra(this);
     }

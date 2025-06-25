@@ -1,23 +1,23 @@
 package ar.info.juego.Topografias;
 
-public class TopologiaAgua implements Topologia{
+public class TopologiaPantano implements Topologia{
     @Override
     public double getProporcionAgua() {
-        return 1;
+        return 0.7;
     }
 
     @Override
     public double getProporcionTierra() {
-        return 0;
-    }
-
-    @Override
-    public boolean compararConTopologiaAgua(TopologiaAgua topologia) {
-        return true;
+        return 0.3;
     }
 
     @Override
     public boolean compararConTopologiaTierra(TopologiaTierra topologia) {
+        return false;
+    }
+
+    @Override
+    public boolean compararConTopologiaAgua(TopologiaAgua topologia) {
         return false;
     }
 
@@ -28,11 +28,11 @@ public class TopologiaAgua implements Topologia{
 
     @Override
     public boolean compararConTopologiaPantano(TopologiaPantano topologia) {
-        return false;
+        return true;
     }
 
     @Override
     public boolean comparar(Topologia topologia) {
-        return topologia.compararConTopologiaAgua(this);
+        return topologia.compararConTopologiaPantano(this);
     }
 }
