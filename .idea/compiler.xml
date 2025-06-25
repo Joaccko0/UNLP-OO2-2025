@@ -16,6 +16,7 @@
         <module name="sandwich" />
         <module name="calculadora" />
         <module name="filesystem" />
+        <module name="prendas" />
         <module name="alquileres" />
         <module name="jira (2)" />
         <module name="jira (1)" />
