@@ -1,0 +1,52 @@
+Evalúe cuál de los siguientes patrones mejor describe el diseño de los Filtros: TemplateMethod, Strategy, Decorator.
+Para realizar la evaluación se sugiere contestar las siguientes preguntas aplicadas a cada uno de los patrones:
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+¿El objetivo del patrón se distingue en el diseño? Elabore en un párrafo.
+
+¿Aplica Template Method?
+❌ No. El patrón Template Method define una estructura común con pasos fijos, dejando a las subclases definir partes del algoritmo.
+Acá no hay métodos definidos parcialmente en Filter.
+Cada filtro redefine completamente el comportamiento de filter(BufferedImage).
+No hay un "esqueleto del algoritmo" en la clase abstracta.
+
+¿Aplica Decorator?
+❌ No (aunque parece a primera vista). El patrón Decorator envuelve un objeto y le agrega comportamiento adicional, manteniendo
+la misma interfaz.
+
+¿Aplica Strategy?
+Sí. El objetivo de Strategy es encapsular distintos algoritmos (en este caso, diferentes filtros de imagen) que se puedan
+intercambiar dinámicamente en tiempo de ejecución.
+Filter es una clase abstracta que actúa como la interfaz del Strategy.
+Cada subclase (Rainbow, RGBShifter, etc.) implementa una estrategia distinta de procesamiento.
+En PNGFilterLauncher, se aplica una colección dinámica de estrategias seleccionadas por argumentos.
+Esto cumple exactamente el propósito de Strategy: poder aplicar filtros sin cambiar la clase que los usa.
+
+Sí, el objetivo del patrón Strategy se distingue claramente en el diseño. El sistema busca aplicar distintos
+filtros de imagen sobre un archivo de entrada, donde cada filtro encapsula un algoritmo diferente de procesamiento.
+Esta necesidad de intercambiar comportamientos de forma dinámica según los argumentos recibidos en tiempo de ejecución
+coincide exactamente con la motivación del patrón Strategy: permitir que una familia de algoritmos se definan, encapsulen
+y se puedan usar de forma intercambiable sin modificar el código del cliente.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+¿La estructura del proyecto coincide con la estructura y los participantes del patrón? Elabore en un párrafo.
+
+Sí, la estructura del proyecto refleja fielmente los participantes del patrón Strategy según el diseño clásico.
+La clase abstracta Filter actúa como la interfaz Strategy, y las clases concretas como Rainbow, RGBShifter o Artifacter
+implementan diferentes ConcreteStrategies. Por otro lado, PNGFilterLauncher cumple el rol de Contexto, que utiliza objetos Filter
+sin conocer su implementación interna. Además, la selección y combinación de filtros en tiempo de ejecución refuerza la
+intención de este patrón.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+En el caso que el patrón coincida, puede distinguir un “smell” o algo que se aleja del patrón presentado en el libro?
+
+Un pequeño alejamiento respecto al patrón Strategy clásico es que la aplicación de múltiples filtros se realiza a través de una
+lista externa (activeFilters) en el Context, en lugar de permitir una composición más fluida o encadenada de estrategias. Esta elección
+de diseño no invalida el uso del patrón, pero limita su extensibilidad en comparación con una estructura más flexible que permitiría
+componer filtros de forma más declarativa o incluso aplicar otros patrones como Decorator en paralelo. Aun así, para el objetivo del
+sistema, esta implementación es válida y funcional.
+
+-----------------------------------------------------------------------------------------------------------------------------------
