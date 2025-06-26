@@ -25,6 +25,7 @@
         <module name="jira (1)" />
         <module name="Topografias" />
         <module name="peliculass" />
+        <module name="estacion" />
         <module name="excursion" />
         <module name="filtros" />
         <module name="EncriptacionNuevo" />
