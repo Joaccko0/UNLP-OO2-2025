@@ -20,6 +20,7 @@
         <module name="prendas" />
         <module name="alquileres" />
         <module name="pc" />
+        <module name="file" />
         <module name="jira (2)" />
         <module name="jira (1)" />
         <module name="Topografias" />
