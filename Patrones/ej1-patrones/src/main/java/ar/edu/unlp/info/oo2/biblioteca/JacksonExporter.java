@@ -1,4 +1,4 @@
-package main.java.ar.edu.unlp.info.oo2.biblioteca;
+package ar.edu.unlp.info.oo2.biblioteca;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 

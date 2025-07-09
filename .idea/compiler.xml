@@ -6,31 +6,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SingleThreadTCPFramework" />
         <module name="coneciones" />
         <module name="biblioteca" />
         <module name="peliculas" />
         <module name="biblioteca (1)" />
         <module name="calculadora (3)" />
         <module name="sueldos" />
-        <module name="calculadora (2)" />
-        <module name="sandwich" />
-        <module name="calculadora" />
-        <module name="accesobd" />
-        <module name="filesystem" />
         <module name="prendas" />
         <module name="alquileres" />
-        <module name="pc" />
         <module name="file" />
-        <module name="jira (2)" />
         <module name="jira (1)" />
         <module name="Topografias" />
         <module name="peliculass" />
         <module name="estacion" />
         <module name="excursion" />
+        <module name="calculadora (2)" />
+        <module name="sandwich" />
+        <module name="calculadora" />
+        <module name="accesobd" />
+        <module name="filesystem" />
+        <module name="pc" />
+        <module name="jira (2)" />
         <module name="filtros" />
         <module name="EncriptacionNuevo" />
         <module name="MediaPlayer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="calculadora (1)" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package main.java.ar.edu.unlp.info.oo2.biblioteca;
+package ar.edu.unlp.info.oo2.biblioteca;
 
 public class Socio {
 	private String nombre;
